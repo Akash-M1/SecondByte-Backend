@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const app = express();
 const server = require('http').createServer(app);
 const socket = require('./chat/socket')(server);
-const PORT = 8000
+const PORT = process.env.PORT || 8000
 
 require("dotenv").config();
 
